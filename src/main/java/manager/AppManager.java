@@ -19,6 +19,9 @@ public class AppManager {
     }
 
     @AfterMethod(enabled = false)
+    //enabled = false: Отключает выполнение этого метода. Сейчас браузер
+    // НЕ будет закрываться автоматически после теста
+    // (сделано для отладки, чтобы видеть, что произошло на экране).
     public void tearDown(){
         if(driver != null){
             driver.quit();
