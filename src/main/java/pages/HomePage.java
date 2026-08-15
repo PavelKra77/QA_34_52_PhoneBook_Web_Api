@@ -7,13 +7,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
+import static utils.PropertiesReader.*;
+
 public class HomePage extends BasePage{
     public HomePage(WebDriver driver){
-        setDriver(driver);
-        driver.get("https://telranedu.web.app/home");
+        setDriver(driver);                                  //сохраняем driver через setDriver() в страницу HomePage
+//        driver.get("https://telranedu.web.app/home");
+          driver.get(getProperty("base.properties", "baseUrl"));
+                                                            // обращаемся к сохраненному driver и направляем его по URL.
         PageFactory.initElements
                 (new AjaxElementLocatorFactory(driver,10), this);
     }
+    //PageFactory  находит на нашей веб-странице все кнопки, текстовые поля и картинки и делает их рабочими.
+    //AjaxElementLocatorFactory ищет кнопку на экране 10 сек
 
     @FindBy(xpath = "//a[text()='LOGIN']")
     WebElement btnLogin;
@@ -33,7 +39,7 @@ public class HomePage extends BasePage{
         inputEmail.sendKeys("dfgrggd@drety.vbg");
     }
 
-    public void ajaxMethod(){
+    public void ajaxMethod(){      // потом закомментировали в тестах
         btnLogin.click();
         inputEmail.sendKeys("fghte@dsgs.bnm");
     }

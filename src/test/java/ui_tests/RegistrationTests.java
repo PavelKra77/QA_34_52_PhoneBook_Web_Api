@@ -8,43 +8,37 @@ import org.testng.annotations.Test;
 import pages.ContactsPage;
 import pages.HomePage;
 import pages.LoginPage;
+
 import static utils.UserFactory.*;
 
 import java.util.Random;
 
 public class RegistrationTests extends AppManager {
     LoginPage loginPage;
+
     @BeforeMethod
-    public void goToRegistrationLoginPage(){
+    public void goToRegistrationLoginPage() {
         new HomePage(getDriver()).clickBtnLogin();
         loginPage = new LoginPage(getDriver());
     }
-
-
-    //Создается объект главной страницы HomePage, в конструктор передается активный
-    // браузер через getDriver().clickBtnLogin();: Вызывается метод клика по кнопке «Login/Registration»
+    //Создаётся new объект(страницу) класса HomePage. Через метод getDriver() берет текущий браузер WebDriver,
+    // и передаёт его в конструктор HomePage. Вызывается метод клика по кнопке LOGIN из HomePage.
+    // Объект HomePage здесь анонимный, без  переменной— он создаётся только для выполнения одного клика и дальше в памяти не сохраняется.
+    //Если объект HomePage вам больше не понадобится в этом методе (нужно только один раз кликнуть по кнопке), сохранять его в переменную вообще не нужно:
+    // в переменную loginPage создаётся объект класса LoginPage. В его конструктор снова передаётся актуальный getDriver().
+    // Теперь все методы с аннотацией @Test могут использовать loginPage (например, loginPage.enterEmail("...")), не создавая объект страницы заново внутри каждого теста.
 
     @Test
-    public void registrationPositiveTest(){
+    public void registrationPositiveTest() {
         int i = new Random().nextInt(1000);
         UserLombok user = UserLombok.builder()
                 .username("vbfte" + i + "34@ew.bh")
                 .password("Adfert23!")
                 .build();
-         loginPage = new LoginPage(getDriver());
-        //Создается объект страницы авторизации/регистрации LoginPage с текущей
-        // сессией браузера getDriver().
-
         loginPage.typeLoginRegistrationForm(user);
-        //Вызывается метод из класса LoginPage, который берет данные из созданного
-        // объекта user(username и password) и вводит их в соответствующие поля формы на экране.
-
         loginPage.clickBtnRegistration();
         Assert.assertTrue(new ContactsPage(getDriver())
                 .validateTextInMessageNoContacts("No Contacts here!"));
-
-
-
     }
 
 //    @Test
@@ -55,21 +49,22 @@ public class RegistrationTests extends AppManager {
 //    public void testAjaxMethod(){
 //        new HomePage(getDriver()).ajaxMethod();
 //    }
+
+
     @Test
-    public void registrationPositiveWithFakerTest(){
+    public void registrationPositiveWithFakerTest() {
         UserLombok user = positiveUser();
         System.out.println(user);
         loginPage.typeLoginRegistrationForm(user);
         loginPage.clickBtnRegistration();
         Assert.assertTrue(new ContactsPage(getDriver())
                 .validateTextInMessageNoContacts("No Contacts here!"));
-
-
-
     }
+    // positiveUser Этот метод внутри себя Запускает faker.internet().emailAddress(), который генерирует случайный уникальный email
+    // UserLombok user: Создаётся локальная переменная user класса UserLombok, в которую сохраняется этот сгенерированный объект.
 
     @Test
-    public void registrationNegativeEmptyAllFieldsTest(){
+    public void registrationNegativeEmptyAllFieldsTest() {
         loginPage.clickBtnRegistration();
         Assert.assertTrue
                 (loginPage.closeAlert().contains("Wrong email or password format"));
