@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import utils.PropertiesReader;
 
 import static utils.PropertiesReader.*;
 
@@ -13,7 +14,7 @@ public class HomePage extends BasePage{
     public HomePage(WebDriver driver){
         setDriver(driver);                                  //сохраняем driver через setDriver() в страницу HomePage
 //        driver.get("https://telranedu.web.app/home");
-          driver.get(getProperty("base.properties", "baseUrl"));
+          driver.get(PropertiesReader.getProperty("base.properties", "baseUrl"));
                                                             // обращаемся к сохраненному driver и направляем его по URL.
         PageFactory.initElements
                 (new AjaxElementLocatorFactory(driver,10), this);
