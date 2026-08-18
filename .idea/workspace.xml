@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="DataProvider">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" afterDir="false" />
+    <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="LoginTests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +77,7 @@
   "keyToString": {
     "Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest.executor": "Run",
     "Gradle.LoginTests.LoginPositiveTest.executor": "Run",
+    "Gradle.LoginTests.loginNegativeEmptyEmailTest.executor": "Run",
     "Gradle.QA_34_52_PhoneBook_Web_Api [:utils.UserFactory.main()].executor": "Run",
     "Gradle.RegistrationTests.executor": "Run",
     "Gradle.RegistrationTests.registrationNegativeEmptyAllFieldsTest.executor": "Run",
@@ -102,7 +103,7 @@
       <recent name="C:\AutoProjects\QA_34_52_PhoneBook_Web_Api\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest">
+  <component name="RunManager" selected="Gradle.LoginTests.loginNegativeEmptyEmailTest">
     <configuration name="LoginTests.LoginNegativeEmptyAllFieldsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -141,6 +142,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ui_tests.LoginTests.LoginPositiveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginTests.loginNegativeEmptyEmailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ui_tests.LoginTests.loginNegativeEmptyEmailTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,37 +224,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registrationPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ui_tests.RegistrationTests.registrationPositiveTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LoginTests.loginNegativeEmptyEmailTest" />
         <item itemvalue="Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest" />
         <item itemvalue="Gradle.LoginTests.LoginPositiveTest" />
         <item itemvalue="Gradle.RegistrationTests.registrationNegativeWrongPasswordTest" />
         <item itemvalue="Gradle.RegistrationTests.registrationNegativeEmptyEmailFieldTest" />
-        <item itemvalue="Gradle.RegistrationTests.registrationPositiveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -273,14 +274,23 @@
       <option name="project" value="LOCAL" />
       <updated>1786902825766</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="LoginTests">
+      <option name="closed" value="true" />
+      <created>1787070728051</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1787070728051</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New" />
     <MESSAGE value="Gitignore" />
     <MESSAGE value="DataProvider" />
-    <option name="LAST_COMMIT_MESSAGE" value="DataProvider" />
+    <MESSAGE value="LoginTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="LoginTests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

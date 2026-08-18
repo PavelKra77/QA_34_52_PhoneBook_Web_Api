@@ -41,6 +41,9 @@ public class LoginPage extends BasePage {
 
     public void clickBtnLogin(){btnLogin.click();}
 
+    public boolean isBtnLoginEnabled(){
+        return btnLogin.isEnabled();
+    }
 
 
 }

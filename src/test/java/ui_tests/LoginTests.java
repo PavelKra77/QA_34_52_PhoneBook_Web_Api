@@ -38,4 +38,19 @@ public class LoginTests extends AppManager {
         loginPage.clickBtnLogin();
         Assert.assertTrue(loginPage.closeAlert().contains("Wrong email or password"));
     }
+
+    @Test
+    public void loginNegativeEmptyEmailTest(){
+        UserLombok emptyUser = UserLombok.builder()
+                .username("")
+                .password(getProperty("base.properties", "password"))
+                .build();
+        loginPage.typeLoginForm(emptyUser);
+        softAssert.assertTrue(loginPage.isBtnLoginEnabled(),
+                "validate isBtnLoginEnabled()");
+        loginPage.clickBtnLogin();
+        softAssert.assertTrue(loginPage.closeAlert().contains("Wrong email or password"));
+        softAssert.assertAll();
+
+    }
 }
