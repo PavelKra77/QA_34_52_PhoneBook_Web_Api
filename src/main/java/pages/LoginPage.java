@@ -29,8 +29,18 @@ public class LoginPage extends BasePage {
 
     }
 
+    public void typeLoginForm(UserLombok user) {
+        inputEmail.sendKeys(user.getUsername());
+        inputPassword.sendKeys(user.getPassword());
+
+    }
+
     public void clickBtnRegistration() {
         btnRegistration.click();
     }
+
+    public void clickBtnLogin(){btnLogin.click();}
+
+
 
 }

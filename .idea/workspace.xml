@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="Gitignore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data_providers/UserDataProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/wrong_email_password .csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/RegistrationTests.java" afterDir="false" />
+    <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="DataProvider">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +75,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest.executor": "Run",
+    "Gradle.LoginTests.LoginPositiveTest.executor": "Run",
     "Gradle.QA_34_52_PhoneBook_Web_Api [:utils.UserFactory.main()].executor": "Run",
     "Gradle.RegistrationTests.executor": "Run",
     "Gradle.RegistrationTests.registrationNegativeEmptyAllFieldsTest.executor": "Run",
@@ -102,8 +102,8 @@
       <recent name="C:\AutoProjects\QA_34_52_PhoneBook_Web_Api\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTests.registrationNegativeWrongPasswordTest">
-    <configuration name="RegistrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest">
+    <configuration name="LoginTests.LoginNegativeEmptyAllFieldsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -116,7 +116,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.RegistrationTests&quot;" />
+            <option value="&quot;ui_tests.LoginTests.LoginNegativeEmptyAllFieldsTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -127,7 +127,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registrationNegativeEmptyAllFieldsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTests.LoginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -140,7 +140,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.RegistrationTests.registrationNegativeEmptyAllFieldsTest&quot;" />
+            <option value="&quot;ui_tests.LoginTests.LoginPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -225,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest" />
+        <item itemvalue="Gradle.LoginTests.LoginPositiveTest" />
         <item itemvalue="Gradle.RegistrationTests.registrationNegativeWrongPasswordTest" />
         <item itemvalue="Gradle.RegistrationTests.registrationNegativeEmptyEmailFieldTest" />
         <item itemvalue="Gradle.RegistrationTests.registrationPositiveTest" />
-        <item itemvalue="Gradle.RegistrationTests.registrationNegativeEmptyAllFieldsTest" />
-        <item itemvalue="Gradle.RegistrationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -265,13 +265,22 @@
       <option name="project" value="LOCAL" />
       <updated>1786818562825</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="DataProvider">
+      <option name="closed" value="true" />
+      <created>1786902825766</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1786902825766</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New" />
     <MESSAGE value="Gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gitignore" />
+    <MESSAGE value="DataProvider" />
+    <option name="LAST_COMMIT_MESSAGE" value="DataProvider" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
