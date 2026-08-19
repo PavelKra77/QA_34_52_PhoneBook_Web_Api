@@ -27,16 +27,22 @@ public class LoginTests extends AppManager {
                 .username(getProperty("base.properties", "email"))
                 .password(getProperty("base.properties", "password"))
                 .build();
-        loginPage.typeLoginForm(user);
+        loginPage.typeLoginRegistrationForm(user);
         loginPage.clickBtnLogin();
-        Assert.assertTrue(new ContactsPage(getDriver())
-                .validateTextInMessageNoContacts("No Contacts here!"));
-    }
+        ContactsPage contactsPage = new ContactsPage(getDriver());
+        softAssert.assertTrue(contactsPage.isLinkContactsDisplayed(),"validate isLinkContactsDisplayed");
+        softAssert.assertTrue(contactsPage.isUrlContainsText("contacts"),"validate url");
+        softAssert.assertAll();
+
+//        Assert.assertTrue(new ContactsPage(getDriver())
+//                .validateTextInMessageNoContacts("No Contacts here!"));
+       }
 
     @Test
     public void LoginNegativeEmptyAllFieldsTest() {
         loginPage.clickBtnLogin();
-        Assert.assertTrue(loginPage.closeAlert().contains("Wrong email or password"));
+//        Assert.assertTrue(loginPage.closeAlert().contains("Wrong email or password"));
+        Assert.assertEquals(loginPage.closeAlert(), "Wrong email or password" );
     }
 
     @Test
@@ -45,7 +51,7 @@ public class LoginTests extends AppManager {
                 .username("")
                 .password(getProperty("base.properties", "password"))
                 .build();
-        loginPage.typeLoginForm(emptyUser);
+        loginPage.typeLoginRegistrationForm(emptyUser);
         softAssert.assertTrue(loginPage.isBtnLoginEnabled(),
                 "validate isBtnLoginEnabled()");
         loginPage.clickBtnLogin();

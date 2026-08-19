@@ -7,7 +7,6 @@ import net.datafaker.Faker; // Java-библиотека, предназначе
 public class UserFactory {
     static Faker faker = new Faker();
 
-    // static — ключевое слово, которое делает поле общим для всех экземпляров класса
 //    public static void main(String[] args) {
 //        String firstName = faker.name().firstName();
 //        System.out.println(firstName);
