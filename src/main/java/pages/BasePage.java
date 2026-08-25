@@ -10,10 +10,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.Duration;
 
 public abstract class BasePage {
     static WebDriver driver;  // лучше protected WebDriver driver
+    public Logger logger = LoggerFactory.getLogger(BasePage.class);
 
     public void setDriver(WebDriver wd) {  //Метод, чтобы передать браузер wd в driver из других страниц.
         driver = wd;
@@ -27,8 +31,9 @@ public abstract class BasePage {
         // Метод возвратит true (тип Boolean), если текст успеет появиться в элементе в течение 5 секунд.
 
         catch (RuntimeException e) {  // Если за 5 секунд текст не нашелся, программа «не падает», а перехватывает ошибку.
-            e.printStackTrace();      //команда «Если ошибка, напечатай в консоль и почему она случилась
-            System.out.println("created exeption");
+//            e.printStackTrace();      //команда «Если ошибка, напечатай в консоль и почему она случилась
+//            System.out.println("created exeption");
+            logger.error("created exeption",e);
         }
         return false;}
 
