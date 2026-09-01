@@ -14,10 +14,15 @@ public class AppManager {
     public WebDriver getDriver(){   // чтобы любой тест мог попросить этот driver.
         return driver;
     }
+    // Модификатор private скрывает переменную внутри класса, а публичный метод getDriver()
+    // дает к ней контролируемый доступ. Это ключевой принцип ООП — инкапсуляция.
 
     public Logger logger = LoggerFactory.getLogger(AppManager.class);
-// Модификатор private скрывает переменную внутри класса, а публичный метод getDriver()
-// дает к ней контролируемый доступ. Это ключевой принцип ООП — инкапсуляция.
+    //настраиваем логгер (инструмент для записи логов/журнала работы программы) с помощью фреймворка SLF4J.
+    //LoggerFactory.getLogger(...) — специальная «фабрика логгеров» - дай логгер Напечатай и отдай мне get экземпляр для записи логов
+    //AppManager.class — передаёт LoggerFactory данные класса AppManager чтобы в логах было видно, какой именно класс записал конкретное сообщение.
+    //пример вывода - 12:00:01 ERROR  [AppManager] - Нажата кнопка Войти
+
 
     @BeforeMethod
         public void setup(Method method){
@@ -27,6 +32,11 @@ public class AppManager {
     }
    // метод выполняется перед каждым отдельным тестом (@Test). Это гарантирует,
     // что каждый тест запускается в чистом, свежем браузере ChromeDriver.
+    //driver = new ChromeDriver(); Запускает новый чистый экземпляр браузера Google Chrome.
+    //Method method — это специальный объект. TestNG автоматически передаёт сюда информацию о том тестовом методе, который собирается запуститься прямо сейчас.
+    //method.getName() достаёт из объекта Method имя теста (например, loginWithValidDataTest).
+   //logger.info(...) записывает красивое сообщение в консоль/файл логов.
+    //пример вывода 18:15:02 INFO [AppManager] - Start testing with method-->loginWithValidDataTest
 
     @AfterMethod(enabled = false)
     //enabled = false: Отключает выполнение этого метода. Сейчас браузер
