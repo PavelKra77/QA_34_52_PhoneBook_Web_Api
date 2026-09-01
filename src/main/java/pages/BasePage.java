@@ -25,17 +25,25 @@ public abstract class BasePage {
 
     public boolean isTextInElementPresent(WebElement element, String text) {
         try {
-            return new WebDriverWait(driver, Duration.ofSeconds(5))   //WebDriverWait — встроенный класс Selenium для умных ожиданий.
-                    .until(ExpectedConditions.textToBePresentInElement(element, text));  //готовое встроенное правило, которое умеет проверять появление текста.
+            return new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .until(ExpectedConditions.textToBePresentInElement(element, text));
         }
         // Метод возвратит true (тип Boolean), если текст успеет появиться в элементе в течение 5 секунд.
+        //WebDriverWait — встроенный класс Selenium для умных ожиданий.
+        //textToBePresentInElement готовое встроенное правило, которое умеет проверять появление текста.
 
-        catch (RuntimeException e) {  // Если за 5 секунд текст не нашелся, программа «не падает», а перехватывает ошибку.
-//            e.printStackTrace();      //команда «Если ошибка, напечатай в консоль и почему она случилась
+        catch (RuntimeException e) {
+//            e.printStackTrace();                    //команда «Если ошибка, напечатай в консоль и почему она случилась
 //            System.out.println("created exeption");
-            logger.error("created exeption",e);
+            logger.error("created exception",e);
         }
         return false;}
+    // Если за 5 секунд текст не нашелся, программа «не падает», а перехватывает ошибку.
+    //e — (сокращение от слова Exception) -это переменная, в которую записывается ошибка (объект перехваченного исключения).
+    //Когда в блоке try происходит сбой, Java создаёт специальный объект ошибки (в данном случае класса RuntimeException или его наследника
+    // и «пробрасывает» его в блок catch.e хранит в себе всю информацию об этой ошибке:Тип ошибки, Текст ошибки ..
+    // logger.error(...) — метод для записи сообщений с уровнем важности ERROR. e — объект перехваченного исключения
+
 
     // или такая запись  boolean result = new WebDriverWait(driver, Duration.ofSeconds(5))
     //                   .until(ExpectedConditions.textToBePresentInElement(element, text));
