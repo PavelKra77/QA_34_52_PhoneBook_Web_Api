@@ -1,6 +1,5 @@
 package pages;
-//Это базовый класс Page Object паттерна (BasePage). От него наследуются все
-// остальные страницы (LoginPage, HomePage).
+//Это базовый класс Page Object паттерна (BasePage). От него наследуются все остальные страницы (LoginPage, HomePage).
 // В нем хранятся методы и переменные, общие для всех страниц.
 //static Делает поле единым для всего приложения. Если одна страница обновит driver, он изменится везде. делает поле общим для всех экземпляров класса
 // abstract BasePage — это не реальная страница. Это шаблон c общим функционалом для всех остальных страниц
@@ -12,7 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.time.Duration;
 
 public abstract class BasePage {

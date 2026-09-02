@@ -15,7 +15,7 @@ public class HomePage extends BasePage{
         setDriver(driver);                                  //сохраняем driver через setDriver() в страницу HomePage
 //        driver.get("https://telranedu.web.app/home");
           driver.get(PropertiesReader.getProperty("base.properties", "baseUrl"));
-                                                            // обращаемся к сохраненному driver через get и направляем его по URL.
+    // обращаемся к сохраненному driver через get и направляем его по URL.
         PageFactory.initElements
                 (new AjaxElementLocatorFactory(driver,10), this);
     }

@@ -9,9 +9,7 @@ import org.testng.annotations.Test;
 import pages.ContactsPage;
 import pages.HomePage;
 import pages.LoginPage;
-
 import static utils.UserFactory.*;
-
 import java.util.Random;
 
 public class RegistrationTests extends AppManager {
@@ -100,5 +98,6 @@ public class RegistrationTests extends AppManager {
                 (loginPage.closeAlert().contains("Wrong email or password format"));
     }
 
-
+// "dataProviderWrongPasswordOrEmail" - название метода в классе UserDataProvider.
+//dataProviderClass = UserDataProvider.class — название самого класса (UserDataProvider).
 }

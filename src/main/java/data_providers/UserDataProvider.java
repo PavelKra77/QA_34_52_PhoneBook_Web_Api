@@ -31,6 +31,7 @@ public class UserDataProvider {
         }
         return list.listIterator();    }
 }
+// @Test(dataProvider = "dataProviderWrongPasswordOrEmail", dataProviderClass = UserDataProvider.class)
 
 // @DataProvider — спецаннотация TestNG. Она обозначает, что этот метод готовит данные для автотестов.
 //1. Iterator<UserLombok> — Заголовок метода обещает: Я верну указатель (Iterator), который выдает объекты UserLombok.

@@ -20,6 +20,8 @@ public class LoginTests extends AppManager {
         new HomePage(getDriver()).clickBtnLogin();
         loginPage = new LoginPage(getDriver());
     }
+    // new HomePage не записываем в переменную, она нам нужна только чтобы кликнуть на BtnLogin
+    //открывшуюся после этого страницу записываем в переменную loginPage, чтобы постоянно с ней работать
 
     @Test
     public void LoginPositiveTest(){
@@ -52,8 +54,7 @@ public class LoginTests extends AppManager {
                 .password(getProperty("base.properties", "password"))
                 .build();
         loginPage.typeLoginRegistrationForm(emptyUser);
-        softAssert.assertTrue(loginPage.isBtnLoginEnabled(),
-                "validate isBtnLoginEnabled()");
+        softAssert.assertTrue(loginPage.isBtnLoginEnabled(),"validate isBtnLoginEnabled()");
         loginPage.clickBtnLogin();
         softAssert.assertTrue(loginPage.closeAlert().contains("Wrong email or password"));
         softAssert.assertAll();

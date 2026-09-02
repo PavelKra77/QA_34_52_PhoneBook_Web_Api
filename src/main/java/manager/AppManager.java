@@ -11,15 +11,16 @@ import java.lang.reflect.Method;
 
 public class AppManager {
     private WebDriver driver;
-    public WebDriver getDriver(){   // чтобы любой тест мог попросить этот driver.
-        return driver;
-    }
+    public WebDriver getDriver(){
+        return driver;}
+
+    //WebDriver это программный интерфейс (API), переводит код на понятный браузеру язык и выполняет действия на экране.
     // Модификатор private скрывает переменную внутри класса, а публичный метод getDriver()
-    // дает к ней контролируемый доступ. Это ключевой принцип ООП — инкапсуляция.
+    // дает к ней контролируемый доступ, чтобы любой тест мог попросить этот driver.Это ключевой принцип ООП — инкапсуляция.
 
     public Logger logger = LoggerFactory.getLogger(AppManager.class);
     //настраиваем логгер (инструмент для записи логов/журнала работы программы) с помощью фреймворка SLF4J.
-    //LoggerFactory.getLogger(...) — специальная «фабрика логгеров» - дай логгер Напечатай и отдай мне get экземпляр для записи логов
+    //LoggerFactory.getLogger(...) — специальная «фабрика логгеров» - дай логгер Напечатай и (get) отдай мне экземпляр для записи логов
     //AppManager.class — передаёт LoggerFactory данные класса AppManager чтобы в логах было видно, какой именно класс записал конкретное сообщение.
     //пример вывода - 12:00:01 ERROR  [AppManager] - Нажата кнопка Войти
 
@@ -39,12 +40,12 @@ public class AppManager {
     //пример вывода 18:15:02 INFO [AppManager] - Start testing with method-->loginWithValidDataTest
 
     @AfterMethod(enabled = false)
+    public void tearDown(){
+        if(driver != null){
+            driver.quit();}
+
     //enabled = false: Отключает выполнение этого метода. Сейчас браузер
     // НЕ будет закрываться автоматически после теста
     // (сделано нами для отладки, чтобы видеть, что произошло на экране).
-    public void tearDown(){
-        if(driver != null){
-            driver.quit();
-        }
     }
 }

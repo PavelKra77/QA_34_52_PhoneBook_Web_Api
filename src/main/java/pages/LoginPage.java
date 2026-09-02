@@ -11,7 +11,6 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
         PageFactory.initElements
                 (new AjaxElementLocatorFactory(driver, 10), this);
-
     }
 
     @FindBy(xpath = "//form/input[1]")
@@ -29,11 +28,6 @@ public class LoginPage extends BasePage {
 
     }
 
-//    public void typeLoginForm(UserLombok user) {
-//        inputEmail.sendKeys(user.getUsername());
-//        inputPassword.sendKeys(user.getPassword());
-//
-//    }
 
     public void clickBtnRegistration() {
         btnRegistration.click();
