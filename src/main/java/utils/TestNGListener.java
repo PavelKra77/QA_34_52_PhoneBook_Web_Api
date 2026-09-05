@@ -1,6 +1,7 @@
 package utils;
 
 import manager.AppManager;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +32,7 @@ public class TestNGListener implements ITestListener {
         logger.error("test failed -->" + result.getName()
                 + "status --> " +result.getStatus());
         this.driver = ((AppManager)result.getInstance()).getDriver();
+        TakeScreenShot.takeScreenShot((TakesScreenshot) driver);
     }
 
     @Override
@@ -44,6 +46,8 @@ public class TestNGListener implements ITestListener {
     public void onTestFailedWithTimeout(ITestResult result) {
         ITestListener.super.onTestFailedWithTimeout(result);
         logger.error("test failed with timeout -->" + result.getName());
+        this.driver = ((AppManager)result.getInstance()).getDriver();
+        TakeScreenShot.takeScreenShot((TakesScreenshot) driver);
     }
 
     @Override
