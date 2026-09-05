@@ -17,6 +17,8 @@ public abstract class BasePage {
     static WebDriver driver;  // лучше protected WebDriver driver
     public Logger logger = LoggerFactory.getLogger(BasePage.class);
 
+
+
     public void setDriver(WebDriver wd) {  //Метод, чтобы передать браузер wd в driver из других страниц.
         driver = wd;
     }
@@ -40,7 +42,16 @@ public abstract class BasePage {
     //e — (сокращение от слова Exception) -это переменная, в которую записывается ошибка (объект перехваченного исключения).
     //Когда в блоке try происходит сбой, Java создаёт специальный объект ошибки (в данном случае класса RuntimeException или его наследника
     // и «пробрасывает» его в блок catch.e хранит в себе всю информацию об этой ошибке:Тип ошибки, Текст ошибки ..
-    // logger.error(...) — метод для записи сообщений с уровнем важности ERROR. e — объект перехваченного исключения
+    // logger.error(...) — метод для записи сообщений с уровнем важности ERROR.
+    //пример  logger.error: 2026-09-03 21:12:00 [main] ERROR BasePage - created exception
+    //    (переменнея е) org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text to be present in element found by By.id: successMessage (tried for 5 second(s) with 500 milliseconds interval)
+    //	  org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+    //	  org.openqa.selenium.support.ui.WebDriverWait.until(WebDriverWait.java:228)
+    //	  pages.BasePage.isTextIdPresent(BasePage.java:26)
+    //    tests.LoginTests.LoginNegativeEmptyAllFieldsTest(LoginTests.java:45)
+    // e.printStackTrace(); выводит стек ошибки только в консоль.
+    // logger.error передает информацию в систему логирования, которая может записывать данные в файлы логов
+    //  выводить их в консоль или отправлять на удаленный сервер.
 
 
     // или такая запись  boolean result = new WebDriverWait(driver, Duration.ofSeconds(5))
