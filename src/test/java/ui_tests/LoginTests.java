@@ -66,3 +66,6 @@ public class LoginTests extends AppManager {
 
     }
 }
+// Прямой вызов (getProperty(...)) Возможен благодаря строке import static utils.PropertiesReader.*;
+// Этот импорт «подтягивает» все статические методы класса PropertiesReader прямо в текущий класс,
+// позволяя вызывать их по короткому имени без указания класса-владельца.

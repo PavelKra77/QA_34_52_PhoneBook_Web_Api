@@ -1,6 +1,5 @@
-package dto; //(Data Transfer Object) — шаблон-контейнер для хранения
-// и передачи данных о пользователе (логин и пароль)
-// между разными частями автотестов.
+package dto; //(Data Transfer Object) — шаблон-контейнер для хранения и передачи данных о пользователе
+// (логин и пароль) между разными частями автотестов.
 
 public class User {
     private String username;
@@ -11,7 +10,7 @@ public class User {
     public User() {
     }
     //Пустой конструктор: Позволяет создать «пустого» пользователя без сразу
-    //заданных логина и пароля User user = new User();,чтобы заполнить их позже.
+    //заданных логина и пароля,чтобы заполнить их позже User user = new User();.
 
     public User(String username, String password) {
         this.username = username;

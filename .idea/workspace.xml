@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="Logger">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/TakeScreenShot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/WDListener.java" afterDir="false" />
+    <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="TestNGListener WDListener">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/BaseApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api_tests/RegistrationLoginApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_providers/UserDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_providers/UserDataProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/AppManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/AppManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/TakeScreenShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/TakeScreenShot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/TestNGListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/TestNGListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/RegistrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +54,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -76,54 +85,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.LoginPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginNegativeEmptyEmailTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.QA_34_52_PhoneBook_Web_Api [:utils.TakeScreenShot.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.QA_34_52_PhoneBook_Web_Api [:utils.UserFactory.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationNegativeEmptyAllFieldsTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationNegativeEmptyEmailFieldTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationNegativeWrongPasswordTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationPositiveWithFakerTest.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/AutoProjects/QA_34_52_PhoneBook_Web_Api/src/test/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest.executor": "Run",
+    "Gradle.LoginTests.LoginPositiveTest.executor": "Run",
+    "Gradle.LoginTests.executor": "Run",
+    "Gradle.LoginTests.loginNegativeEmptyEmailTest.executor": "Run",
+    "Gradle.QA_34_52_PhoneBook_Web_Api [:utils.TakeScreenShot.main()].executor": "Run",
+    "Gradle.QA_34_52_PhoneBook_Web_Api [:utils.UserFactory.main()].executor": "Run",
+    "Gradle.RegistrationLoginApiTests.loginApiPositiveTest.executor": "Run",
+    "Gradle.RegistrationLoginApiTests.registrationApiDuplicateUserNegativeTest.executor": "Run",
+    "Gradle.RegistrationLoginApiTests.registrationApiPositiveTest.executor": "Run",
+    "Gradle.RegistrationLoginApiTests.registrationApiWrongFormatNegativeTest.executor": "Run",
+    "Gradle.RegistrationLoginApiTests.registrationApiWrongPasswordNegativeTest.executor": "Run",
+    "Gradle.RegistrationTests.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeEmptyAllFieldsTest.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeEmptyEmailFieldTest.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeWrongPasswordTest.executor": "Run",
+    "Gradle.RegistrationTests.registrationPositiveTest.executor": "Run",
+    "Gradle.RegistrationTests.registrationPositiveWithFakerTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/AutoProjects/QA_34_52_PhoneBook_Web_Api/src/test/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\AutoProjects\QA_34_52_PhoneBook_Web_Api\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTests.registrationNegativeWrongPasswordTest">
-    <configuration name="TakeScreenShot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utils.TakeScreenShot" />
-      <module name="QA_34_52_PhoneBook_Web_Api.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RegistrationLoginApiTests.loginApiWrongPasswordNegativeTest">
+    <configuration name="RegistrationLoginApiTests.loginApiPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +137,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.LoginTests&quot;" />
+            <option value="&quot;api_tests.RegistrationLoginApiTests.loginApiPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,7 +148,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.LoginNegativeEmptyAllFieldsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationLoginApiTests.loginApiWrongPasswordNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,7 +161,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.LoginTests.LoginNegativeEmptyAllFieldsTest&quot;" />
+            <option value="&quot;api_tests.RegistrationLoginApiTests.loginApiWrongPasswordNegativeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -171,7 +172,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.LoginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationLoginApiTests.registrationApiDuplicateUserNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -184,7 +185,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.LoginTests.LoginPositiveTest&quot;" />
+            <option value="&quot;api_tests.RegistrationLoginApiTests.registrationApiDuplicateUserNegativeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -195,7 +196,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registrationNegativeWrongPasswordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationLoginApiTests.registrationApiWrongFormatNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -208,7 +209,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.RegistrationTests.registrationNegativeWrongPasswordTest&quot;" />
+            <option value="&quot;api_tests.RegistrationLoginApiTests.registrationApiWrongFormatNegativeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RegistrationLoginApiTests.registrationApiWrongPasswordNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;api_tests.RegistrationLoginApiTests.registrationApiWrongPasswordNegativeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -221,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RegistrationTests.registrationNegativeWrongPasswordTest" />
-        <item itemvalue="Application.TakeScreenShot" />
-        <item itemvalue="Gradle.LoginTests" />
-        <item itemvalue="Gradle.LoginTests.LoginPositiveTest" />
-        <item itemvalue="Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest" />
+        <item itemvalue="Gradle.RegistrationLoginApiTests.loginApiWrongPasswordNegativeTest" />
+        <item itemvalue="Gradle.RegistrationLoginApiTests.loginApiPositiveTest" />
+        <item itemvalue="Gradle.RegistrationLoginApiTests.registrationApiWrongFormatNegativeTest" />
+        <item itemvalue="Gradle.RegistrationLoginApiTests.registrationApiDuplicateUserNegativeTest" />
+        <item itemvalue="Gradle.RegistrationLoginApiTests.registrationApiWrongPasswordNegativeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -349,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788628136440</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="TestNGListener WDListener">
+      <option name="closed" value="true" />
+      <created>1788636381254</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1788636381254</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -359,6 +392,7 @@
     <MESSAGE value="LoginTests" />
     <MESSAGE value="Login Tests" />
     <MESSAGE value="Logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logger" />
+    <MESSAGE value="TestNGListener WDListener" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestNGListener WDListener" />
   </component>
 </project>

@@ -25,5 +25,6 @@ public class UserFactory {
                 .password(PropertiesReader.getProperty("base.properties", "password_for_registration"))
                 .build();
         return user;
+
     }
 }

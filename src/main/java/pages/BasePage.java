@@ -17,8 +17,6 @@ public abstract class BasePage {
     static WebDriver driver;  // лучше protected WebDriver driver
     public Logger logger = LoggerFactory.getLogger(BasePage.class);
 
-
-
     public void setDriver(WebDriver wd) {  //Метод, чтобы передать браузер wd в driver из других страниц.
         driver = wd;
     }
@@ -53,14 +51,13 @@ public abstract class BasePage {
     // logger.error передает информацию в систему логирования, которая может записывать данные в файлы логов
     //  выводить их в консоль или отправлять на удаленный сервер.
 
-
     // или такая запись  boolean result = new WebDriverWait(driver, Duration.ofSeconds(5))
     //                   .until(ExpectedConditions.textToBePresentInElement(element, text));
     //                    return result;
     // textToBePresentInElement        ищет в  <div>, <span>, <p>, <h1>, <button> (между тегами <tag>Текст</tag>)
     // textToBePresentInElementValue   ищет в  <input>, <textarea>                (Внутри атрибута value="...")
 
-    public boolean isUrlContainsText(String text){
+       public boolean isUrlContainsText(String text){
         try {
             return new WebDriverWait(driver, Duration.ofSeconds(5))
                     .until(ExpectedConditions.urlContains(text));
@@ -88,3 +85,16 @@ public abstract class BasePage {
     }
 
 }
+// e.printStackTrace() просто печатает информацию об ошибке в консоль и позволяет программе идти дальше,
+// throw new RuntimeException(e) мгновенно останавливает выполнение и аварийно завершает процесс без фильтров.
+// logger.error("created exception", e); отправляет информацию об ошибке в систему логов
+// (с таймстампом, именем класса и возможностью записи в файл),но не останавливает выполнение программы
+
+// catch(RuntimeException) Перехватывает не проверяемые (runtime) ошибки по логическим причинам (например, деление на ноль или обращение к пустой ссылке)
+// catch(IOException) относится к проверяемым ошибкам ввода-вывода(Input/Output) которые Java требует обрабатывать обязательно.
+// catch(InterruptedException) — узкоспециализированная ошибка, которая возникает только при принудительном прерывании работающего потока (в основном привязана к методам ожидания вроде Thread.sleep()).
+// Наизусть синтаксис учить не нужно — IDEA всегда подскажет правильный класс.
+// IOException - Работаете с файлами.
+// InterruptedException - Работаете с паузами/потоками.
+// RuntimeException - Хотите перехватить общие логические ошибки или завернуть проверяемую ошибку в автотестах.
+
