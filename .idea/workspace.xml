@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="TestNGListener WDListener">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/BaseApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api_tests/RegistrationLoginApiTests.java" afterDir="false" />
+    <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="Api Registration and Login Tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ContactDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ResponseMessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/TokenDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ContactFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ILogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api_tests/AddNewContactApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data_providers/UserDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_providers/UserDataProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/AppManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/AppManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PropertiesReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/TakeScreenShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/TakeScreenShot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/TestNGListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/TestNGListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui_tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BaseApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BaseApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,6 +81,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.AddNewContactApiTests.addNewContactPositiveTest.executor": "Run",
+    "Gradle.AddNewContactApiTests.addNewContactWithSoftAssertPositiveTest.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
     "Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest.executor": "Run",
     "Gradle.LoginTests.LoginPositiveTest.executor": "Run",
@@ -95,6 +91,7 @@
     "Gradle.QA_34_52_PhoneBook_Web_Api [:utils.TakeScreenShot.main()].executor": "Run",
     "Gradle.QA_34_52_PhoneBook_Web_Api [:utils.UserFactory.main()].executor": "Run",
     "Gradle.RegistrationLoginApiTests.loginApiPositiveTest.executor": "Run",
+    "Gradle.RegistrationLoginApiTests.loginApiWrongPasswordNegativeTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.registrationApiDuplicateUserNegativeTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.registrationApiPositiveTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.registrationApiWrongFormatNegativeTest.executor": "Run",
@@ -123,7 +120,55 @@
       <recent name="C:\AutoProjects\QA_34_52_PhoneBook_Web_Api\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationLoginApiTests.loginApiWrongPasswordNegativeTest">
+  <component name="RunManager" selected="Gradle.AddNewContactApiTests.addNewContactWithSoftAssertPositiveTest">
+    <configuration name="AddNewContactApiTests.addNewContactPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;api_tests.AddNewContactApiTests.addNewContactPositiveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AddNewContactApiTests.addNewContactWithSoftAssertPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;api_tests.AddNewContactApiTests.addNewContactWithSoftAssertPositiveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="RegistrationLoginApiTests.loginApiPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -172,30 +217,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationLoginApiTests.registrationApiDuplicateUserNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationLoginApiTests.registrationApiDuplicateUserNegativeTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="RegistrationLoginApiTests.registrationApiWrongFormatNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -220,37 +241,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationLoginApiTests.registrationApiWrongPasswordNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationLoginApiTests.registrationApiWrongPasswordNegativeTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddNewContactApiTests.addNewContactWithSoftAssertPositiveTest" />
+        <item itemvalue="Gradle.AddNewContactApiTests.addNewContactPositiveTest" />
         <item itemvalue="Gradle.RegistrationLoginApiTests.loginApiWrongPasswordNegativeTest" />
         <item itemvalue="Gradle.RegistrationLoginApiTests.loginApiPositiveTest" />
         <item itemvalue="Gradle.RegistrationLoginApiTests.registrationApiWrongFormatNegativeTest" />
-        <item itemvalue="Gradle.RegistrationLoginApiTests.registrationApiDuplicateUserNegativeTest" />
-        <item itemvalue="Gradle.RegistrationLoginApiTests.registrationApiWrongPasswordNegativeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788636381254</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Api Registration and Login Tests">
+      <option name="closed" value="true" />
+      <created>1791290888962</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1791290888962</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -393,6 +398,7 @@
     <MESSAGE value="Login Tests" />
     <MESSAGE value="Logger" />
     <MESSAGE value="TestNGListener WDListener" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestNGListener WDListener" />
+    <MESSAGE value="Api Registration and Login Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api Registration and Login Tests" />
   </component>
 </project>
