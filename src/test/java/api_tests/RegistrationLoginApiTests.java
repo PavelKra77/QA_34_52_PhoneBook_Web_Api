@@ -10,6 +10,8 @@ import org.testng.annotations.Test;
 import utils.BaseApi;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import static utils.UserFactory.*;
 import static utils.PropertiesReader.*;
@@ -177,6 +179,24 @@ public class RegistrationLoginApiTests implements BaseApi {
     }
 
     @Test
+    public void registrationApiWrongTypeOfRequestNegativeTest() {
+        Request request = new Request.Builder()
+                .url(BASE_URL + REGISTRATION_URL)
+                .get()
+                .build();
+        Response response;
+        try {
+            response = OK_HTTP_CLIENT.newCall(request).execute();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(response);
+        Assert.assertEquals(response.code(), 403);
+    }
+
+
+    @Test
     public void loginApiPositiveTest(){
         UserLombok user = UserLombok.builder()
                 .username(getProperty("base.properties","email"))
@@ -316,7 +336,7 @@ public class RegistrationLoginApiTests implements BaseApi {
     public void loginApiWrongShortPasswordNegativeTest(){
         UserLombok user = UserLombok.builder()
                 .username(getProperty("base.properties","email"))
-                .password("Qwerty1!")
+                .password("Qwert1!")
                 .build();
         RequestBody requestBody = RequestBody.create(GSON.toJson(user), JSON);
         Request request = new Request.Builder()
@@ -335,4 +355,29 @@ public class RegistrationLoginApiTests implements BaseApi {
     }
 
 
+    @Test
+    public void loginApiWrongKeyEmailNegativeTest(){
+        UserLombok user = UserLombok.builder()
+                .username(getProperty("base.properties","email"))
+                .password(getProperty("base.properties","password"))
+                .build();
+        Map<String,String> invalidJson = new HashMap<>();
+        invalidJson.put("email", user.getUsername());
+        invalidJson.put("password", user.getPassword());
+
+        RequestBody requestBody = RequestBody.create(GSON.toJson(invalidJson), JSON);
+        Request request = new Request.Builder()
+                .url(BASE_URL + LOGIN_URL)
+                .post(requestBody)
+                .build();
+        Response response;
+        try {
+            response = OK_HTTP_CLIENT.newCall(request).execute();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(response);
+        Assert.assertEquals(response.code(), 500);
+
+    }
 }

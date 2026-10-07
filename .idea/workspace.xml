@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb53da62-bb8b-43ce-844e-d85f75d8b89e" name="Changes" comment="Api Registration and Login and AddTests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ContactsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ICreateContact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api_tests/GetAllUserContactsApiTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api_tests/UpdateContactApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BaseApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BaseApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api_tests/AddNewContactApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api_tests/AddNewContactApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api_tests/RegistrationLoginApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api_tests/RegistrationLoginApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +82,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.AddNewContactApiTests.addNewContactPositiveTest.executor": "Run",
+    "Gradle.AddNewContactApiTests.addNewContactWOTokenNegativeTest.executor": "Run",
     "Gradle.AddNewContactApiTests.addNewContactWithSoftAssertPositiveTest.executor": "Run",
+    "Gradle.AddNewContactApiTests.addNewContactWrongTokenNegativeTest.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
+    "Gradle.GetAllUserContactsApiTests.getAllUserContactsPositiveTest.executor": "Run",
     "Gradle.LoginTests.LoginNegativeEmptyAllFieldsTest.executor": "Run",
     "Gradle.LoginTests.LoginPositiveTest.executor": "Run",
     "Gradle.LoginTests.executor": "Run",
@@ -91,6 +100,7 @@
     "Gradle.RegistrationLoginApiTests.loginApiPositiveTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.loginApiWrongEmailTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.loginApiWrongFormatNegativeTest.executor": "Run",
+    "Gradle.RegistrationLoginApiTests.loginApiWrongKeyEmailNegativeTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.loginApiWrongLoginTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.loginApiWrongPasswordNegativeTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.loginApiWrongPasswordsNegativeTest.executor": "Run",
@@ -102,12 +112,15 @@
     "Gradle.RegistrationLoginApiTests.registrationApiWrongFormatNegativeTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.registrationApiWrongLetterPasswordNegativeTest.executor": "Run",
     "Gradle.RegistrationLoginApiTests.registrationApiWrongPasswordNegativeTest.executor": "Run",
+    "Gradle.RegistrationLoginApiTests.registrationApiWrongPasswordsNegativeTest.executor": "Run",
+    "Gradle.RegistrationLoginApiTests.registrationApiWrongTypeOfRequestNegativeTest.executor": "Run",
     "Gradle.RegistrationTests.executor": "Run",
     "Gradle.RegistrationTests.registrationNegativeEmptyAllFieldsTest.executor": "Run",
     "Gradle.RegistrationTests.registrationNegativeEmptyEmailFieldTest.executor": "Run",
     "Gradle.RegistrationTests.registrationNegativeWrongPasswordTest.executor": "Run",
     "Gradle.RegistrationTests.registrationPositiveTest.executor": "Run",
     "Gradle.RegistrationTests.registrationPositiveWithFakerTest.executor": "Run",
+    "Gradle.UpdateContactApiTests.updateContactPositiveTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -126,8 +139,8 @@
       <recent name="C:\AutoProjects\QA_34_52_PhoneBook_Web_Api\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationLoginApiTests.registrationApiWrongPasswordsNegativeTest">
-    <configuration name="RegistrationLoginApiTests.RegistrationApiWrongPasswordsNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UpdateContactApiTests.updateContactPositiveTest">
+    <configuration name="AddNewContactApiTests.addNewContactPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -140,7 +153,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationLoginApiTests.RegistrationApiWrongPasswordsNegativeTest&quot;" />
+            <option value="&quot;api_tests.AddNewContactApiTests.addNewContactPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -151,7 +164,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationLoginApiTests.loginApiWrongPasswordsNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddNewContactApiTests.addNewContactWOTokenNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -164,7 +177,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationLoginApiTests.loginApiWrongPasswordsNegativeTest&quot;" />
+            <option value="&quot;api_tests.AddNewContactApiTests.addNewContactWOTokenNegativeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,7 +188,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationLoginApiTests.registrationApiEmptyFieldsNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddNewContactApiTests.addNewContactWrongTokenNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -188,7 +201,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationLoginApiTests.registrationApiEmptyFieldsNegativeTest&quot;" />
+            <option value="&quot;api_tests.AddNewContactApiTests.addNewContactWrongTokenNegativeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,7 +212,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationLoginApiTests.registrationApiWrongPasswordsNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GetAllUserContactsApiTests.getAllUserContactsPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -212,7 +225,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationLoginApiTests.registrationApiWrongPasswordsNegativeTest&quot;" />
+            <option value="&quot;api_tests.GetAllUserContactsApiTests.getAllUserContactsPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -223,7 +236,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registrationNegativeWrongPasswordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateContactApiTests.updateContactPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -236,7 +249,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ui_tests.RegistrationTests.registrationNegativeWrongPasswordTest&quot;" />
+            <option value="&quot;api_tests.UpdateContactApiTests.updateContactPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -249,11 +262,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RegistrationLoginApiTests.registrationApiWrongPasswordsNegativeTest" />
-        <item itemvalue="Gradle.RegistrationLoginApiTests.RegistrationApiWrongPasswordsNegativeTest" />
-        <item itemvalue="Gradle.RegistrationTests.registrationNegativeWrongPasswordTest" />
-        <item itemvalue="Gradle.RegistrationLoginApiTests.loginApiWrongPasswordsNegativeTest" />
-        <item itemvalue="Gradle.RegistrationLoginApiTests.registrationApiEmptyFieldsNegativeTest" />
+        <item itemvalue="Gradle.UpdateContactApiTests.updateContactPositiveTest" />
+        <item itemvalue="Gradle.GetAllUserContactsApiTests.getAllUserContactsPositiveTest" />
+        <item itemvalue="Gradle.AddNewContactApiTests.addNewContactPositiveTest" />
+        <item itemvalue="Gradle.AddNewContactApiTests.addNewContactWOTokenNegativeTest" />
+        <item itemvalue="Gradle.AddNewContactApiTests.addNewContactWrongTokenNegativeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -401,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791298913289</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Api Registration and Login and AddTests">
+      <option name="closed" value="true" />
+      <created>1791311587696</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1791311587696</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
